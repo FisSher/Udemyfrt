@@ -71,3 +71,8 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,visualstudiocode
 .vscode/settings.json
 .settings/org.eclipse.buildship.core.prefs
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+bin/
