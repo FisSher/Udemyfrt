@@ -1,20 +1,16 @@
 package Steps;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.Validatable;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
-import java.util.Map;
 
-import static io.restassured.RestAssured.*;
-import static org.junit.Assert.*;
-
+import static io.restassured.RestAssured.given;
 
 public class APISteps {
 
@@ -42,7 +38,7 @@ public class APISteps {
         response = request
                 .when()
                 .get(endpoint);
-        Assertions.assertEquals(response.getStatusCode(),200);
+        Assertions.assertEquals(response.getStatusCode(), 200);
 
         List<String> jsonResponse = response.jsonPath().getList("$");
         int actualSize = jsonResponse.size();
