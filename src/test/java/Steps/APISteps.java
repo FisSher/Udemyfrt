@@ -46,10 +46,9 @@ public class APISteps {
 
         List<String> jsonResponse = response.jsonPath().getList("$");
         int actualSize = jsonResponse.size();
+        //Placeholder for multiple assertions
         Assertions.assertAll(
-                () -> Assertions.assertEquals(expectedSize, actualSize),
-                () -> Assertions.assertEquals("b", "a"),
-                () -> Assertions.assertEquals("a", "a")
+                () -> Assertions.assertEquals(expectedSize, actualSize)
         );
     }
 }
